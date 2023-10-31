@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <th:block th:include="fragments/stylesheet.html"></th:block>
+</head>
+
+<body class="sub_page">
+
+
+<!-- header section starts -->
+
+<th:block th:include="fragments/header.html"></th:block>
+
+<body>
+<div id ="registration">
+    <h1 class="text-center mt-5">User Registration</h1>
+
+    <form id="registration" action="/register" method="post" class="mt-4">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter Your Email ID" required>
+        </div>
+
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Enter Your Full Name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Create Password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" class="form-control"
+                   placeholder="Confirm Your Password" required>
+        </div>
+
+        <button class="register-button">Register</button>
+
+        <p class="login button">Already have an account? <a href="/login" >Login</a></p>
+    </form>
+</div>
+
+<!-- Include jQuery and Bootstrap JavaScript -->
+<script src="/js/jquery-3.7.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Include jQuery Validation Plugin -->
+<script src="/js/jquery.validate.js"></script>
+
+<!-- Custom jQuery validation script -->
+<script>
+    $(document).ready(function () {
+        $("#registrationForm").validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                },
+                username: {
+                    required: true
+                },
+                password: {
+                    required: true,
+                    minlength: 6
+                },
+                confirmPassword: {
+                    required: true,
+                    equalTo: "#password"
+                }
+            },
+            messages: {
+                email: "Please enter a valid email address",
+                username: "Please enter your full name",
+                password: {
+                    required: "Please enter a password",
+                    minlength: "Password must be at least 6 characters long"
+                },
+                confirmPassword: {
+                    required: "Please confirm your password",
+                    equalTo: "Passwords do not match"
+                }
+            },
+            errorPlacement: function (error, element) {
+                error.appendTo(element.parent());
+            }
+        });
+    });
+
+
+
+</script>
+
+<!-- info section -->
+
+<section class="info_section layout_padding2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-2 info_col">
+                <div class="info_link_box">
+                    <div class="info_links">
+                         <a th:href="@{/}">
+                Home
+              </a>
+              <a th:href="@{/dashboard}">
+                Dashboard
+              </a>
+              <a class="" href=".html"> <!--Page not yet created -->
+                Tips
+              </a>
+            </div>
+        
+         </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col ">
+            <div class="info_links">
+               <a th:href="@{/budgets}">
+                Budget
+              </a>
+              <a th:href="@{/expenses}">
+                Expenses
+              </a>
+             <a th:href="@{/goals}">
+                Goals
+              </a>
+              <a th:href="@{/report}">
+                Reports
+                    </a>
+                </div>
+            </div>
+            <!--
+            <div class="col-md-6 col-lg-3 info_col ">
+              <h4>
+                Subscribe
+              </h4>
+              <form action="#">
+                <input type="text" placeholder="Enter email" />
+                <button type="submit">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+            -->
+        </div>
+    </div>
+</section>
+</body>
+</html>

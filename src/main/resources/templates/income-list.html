@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <th:block th:include="fragments/stylesheet.html"></th:block>
+</head>
+
+<body class="sub_page">
+
+
+<!-- header section starts -->
+
+<th:block th:include="fragments/header.html"></th:block>
+<body>
+<!-- Your header content here -->
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Income List</h1>
+    <a th:href="@{/budgets}">Manage Budget</a>
+    <!-- Table to display income data -->
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Iterate over the income data and populate the table rows -->
+        <tr th:each="income : ${incomes}">
+            <td th:text="${income.category.categoryName}"></td>
+            <td th:text="${income.amount}"></td>
+            <td th:text="${income.date}"></td>
+            <td><a th:href="@{'/income/edit/' + ${income.id}}">Edit</a></td>
+            <td><a th:href="@{'/income/delete/' + ${income.id}}" class="text-danger">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="text-center mt-4">
+        <a href="/income/add" class="btn btn-primary">Add Income</a>
+    </div>
+</div>
+<!-- info section -->
+
+<section class="info_section layout_padding2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-2 info_col">
+                <div class="info_link_box">
+                    <div class="info_links">
+                         <a th:href="@{/}">
+                Home
+              </a>
+              <a th:href="@{/dashboard}">
+                Dashboard
+              </a>
+              <a class="" href=".html"> <!--Page not yet created -->
+                Tips
+              </a>
+            </div>
+        
+         </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col ">
+            <div class="info_links">
+               <a th:href="@{/budgets}">
+                Budget
+              </a>
+              <a th:href="@{/expenses}">
+                Expenses
+              </a>
+             <a th:href="@{/goals}">
+                Goals
+              </a>
+              <a th:href="@{/report}">
+                Reports
+                    </a>
+                </div>
+            </div>
+            <!--
+            <div class="col-md-6 col-lg-3 info_col ">
+              <h4>
+                Subscribe
+              </h4>
+              <form action="#">
+                <input type="text" placeholder="Enter email" />
+                <button type="submit">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+            -->
+        </div>
+    </div>
+</section>
+<!-- Your footer content here -->
+</body>
+</html>

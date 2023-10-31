@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title> SmartSpend | Expense</title>
+    <th:block th:include="fragments/stylesheet.html" >
+
+    </th:block>
+
+</head>
+<body class="sub_page">
+
+
+<th:block th:include="fragments/header.html"></th:block>
+<header>
+    <a href="/dashboard" class="btn btn-back">Back</a>
+    <h1>Welcome User</h1>
+    <div></div>
+</header>
+<main>
+    <h2 class="highlighted-text text-center" th:if="${goal.goalid==null}">Add New Goal</h2>
+    <h2 class="highlighted-text text-center" th:if="${goal.goalid!=null}">Update Goal</h2>
+    <form id="goal-form" action="/create-update-goal" method="post" >
+        <div class="form-group">
+            <label for="goal-name" class="highlighted-text">Goal Name:</label>
+            <input type="text" hidden="hidden" name="goalid" th:value="${goal.goalid}" />
+            <input type="text" hidden="hidden" name="status" th:value="${goal.status}" />
+            <input type="text" id="goal-name" name="goalname" class="form-control" placeholder="Name of your Goal" th:value="${goal.goalname}" required>
+        </div>
+        <div class="form-group">
+            <label for="goal-cost" class="highlighted-text">Total Cost ($):</label>
+            <input type="number" id="goal-cost" name="goalcost" class="form-control" placeholder="Total Cost for your Goal" th:value="${goal.goalcost}" required>
+        </div>
+        <div class="form-group">
+            <label for="goal-deadline" class="highlighted-text">Deadline:</label>
+            <input type="date" id="goal-deadline" name="goaldeadline" class="form-control" th:value="${goal.goaldeadline}" required>
+        </div>
+        <div class="form-group">
+            <label for="current-savings" class="highlighted-text">Current Savings ($):</label>
+            <input type="number" id="current-savings" name="currentsavings" class="form-control" placeholder="Current Savings you have for this Goal" th:value="${goal.currentsavings}" required>
+        </div>
+        <div th:switch="${goal.goalid==null}">
+            <button type="submit" class="btn btn-primary" th:case="${true}">Add Goal</button>
+            <button type="submit" class="btn btn-primary" th:case="*">Update Goal</button>
+            
+        </div>
+    </form>
+    
+    
+    <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-2 info_col">
+          <div class="info_link_box">
+            <div class="info_links">
+                 <a th:href="@{/}">
+                Home
+              </a>
+              <a th:href="@{/dashboard}">
+                Dashboard
+              </a>
+              <a class="" href=".html"> <!--Page not yet created -->
+                Tips
+              </a>
+            </div>
+        
+         </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col ">
+            <div class="info_links">
+               <a th:href="@{/budgets}">
+                Budget
+              </a>
+              <a th:href="@{/expenses}">
+                Expenses
+              </a>
+             <a th:href="@{/goals}">
+                Goals
+              </a>
+              <a th:href="@{/report}">
+                Reports
+              </a>
+            </div>
+          </div>
+        <!--
+        <div class="col-md-6 col-lg-3 info_col ">
+          <h4>
+            Subscribe
+          </h4>
+          <form action="#">
+            <input type="text" placeholder="Enter email" />
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+        -->
+      </div>
+    </div>
+  </section>
+
+<!-- end info section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+    
+
+
+</main>
+</body>
+</html>

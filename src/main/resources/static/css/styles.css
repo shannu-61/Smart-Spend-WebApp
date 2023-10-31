@@ -1,0 +1,434 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    background: hsl(180, 4%, 91%);
+    margin: 0;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    position:absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #222;
+    margin-top: 20px;
+    font-family: 'arial'; 
+  }
+  
+  #login {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  #login {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #login h1 {
+    font-size: 24px;
+    color: #222;
+    margin-top: 20px;
+    font-family: 'Your Font'; /* Change 'Your Font' to your desired font */
+  }
+  
+  #login .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #login .form-group label {
+    font-family: 'Your Font'; /* Change 'Your Font' to your desired font */
+  }
+  
+#login input[type="text"],
+#login input[type="password"] {
+  width: 90%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background-color: #eee;
+  transition: border-color 0.3s ease, transform 0.2s ease; /* Added transform property */
+}
+
+#login input[type="text"]:focus,
+#login input[type="password"]:focus {
+  outline: none;
+  border-color: #666;
+  transform: scale(1.05); /* Scale up the input field on focus */
+}
+
+
+#login .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#login .form-group label {
+  font-family: 'Your Font'; /* Change 'Your Font' to your desired font */
+  text-align: left; /* Align labels to the left */
+}
+
+#login .input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+  
+#login button,
+#login .register-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  margin: 10px 0;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform property */
+}
+
+#login button {
+  background-color: #222;
+  color: #fff;
+}
+
+#login .register-button {
+  background-color: #222;
+  color: #fff;
+}
+
+#login button:hover,
+#login .register-button:hover {
+  background-color: #444;
+  transform: scale(1.1); /* Scale up the button on hover */
+}
+
+#registration {
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #registration h1 {
+    font-size: 24px;
+    color: #222;
+    margin-top: 20px;
+    font-family: 'Arial'; /* Change 'Your Font' to your desired font */
+  }
+  
+  #registration .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #registration .form-group label {
+    font-family: 'Arial'; /* Change 'Your Font' to your desired font */
+  }
+  
+  #registration input[type="text"],
+  #registration input[type="password"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color: #eee;
+    transition: border-color 0.3s ease, transform 0.2s ease; /* Added transform property */
+  }
+  
+  #registration input[type="text"]:focus,
+  #registration input[type="password"]:focus {
+    outline: none;
+    border-color: #666;
+    transform: scale(1.05); /* Scale up the input field on focus */
+  }
+  
+  #registration .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  #registration .form-group label {
+    font-family: 'Arial'; /* Change 'Your Font' to your desired font */
+    text-align: left; /* Align labels to the left */
+  }
+  
+  #registration .input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  #registration .register-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform property */
+    background-color: #222;
+    color: #fff;
+  }
+  
+  #registration .register-button:hover {
+    background-color: #444;
+    transform: scale(1.1); /* Scale up the button on hover */
+  }
+  
+  #registration .footer {
+    display: flex;
+    font-size: 0.7em;
+    color: hsl(0deg 0% 37%);
+    gap: 14em;
+    padding-bottom: 10em;
+  }
+  
+  #registration .footer span {
+    cursor: pointer;
+  }
+  #registration input[type="email"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color: #eee;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #registration input[type="email"]:focus {
+    outline: none;
+    border-color: #666;
+    transform: scale(1.05);
+  }
+  
+  #registration input[type="email"]:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+  }
+
+  #financial-goals {
+    margin: 0 auto; /* Center the financial goals content horizontally */
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #financial-goals h1 {
+    font-size: 24px;
+    color: #222;
+    margin-top: 20px;
+    font-family: 'Your Font'; /* Change 'Your Font' to your desired font */
+  }
+  
+  #financial-goals .goal-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #financial-goals .goal-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    background-color: #eee;
+  }
+  
+  #financial-goals .goal-list-item h2 {
+    font-size: 18px;
+    color: #222;
+  }
+  
+  #financial-goals .goal-list-item p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  #financial-goals .add-goal-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #222;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #financial-goals .add-goal-button:hover {
+    background-color: #444;
+    transform: scale(1.1);
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlight {
+    background-color: rgba(169, 169, 169, 0.5);
+    padding: 1%;
+    border-radius: 1px;
+    text-align: center; /* Add text alignment */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+td {
+    background-color: #ccc;
+    color: #000;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.table-container {
+    width: 75%;
+}
+
+.btn-edit, .btn-delete {
+    background-color: #0275d8;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer; /* Add cursor pointer for buttons */
+}
+
+.btn-delete {
+    background-color: #d9534f;
+}
+
+.modal-title, .model-label {
+    color: black;
+}
+
+#editForm input[type="text"] {
+    width: 90%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color: #eee;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #editForm input[type="text"]:focus {
+    outline: none;
+    border-color: #666;
+    transform: scale(1.05);
+  }
+  .highlighted-text {
+    background-color: rgba(29, 29, 29, 0.5); /* Translucent gray background */
+    padding: 10px; /* Add padding to the highlighted area */
+    border-radius: 20px; /* Add border-radius for rounded corners */
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: 50%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color: #eee;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    border-color: #666;
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btn-back {
+    background-color: #0275d8;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}

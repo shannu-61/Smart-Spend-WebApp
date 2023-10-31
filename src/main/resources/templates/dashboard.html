@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <title> SmartSpend | Dashboard</title>
+  <th:block th:include="fragments/stylesheet.html" >
+
+  </th:block>
+
+</head>
+
+<body class="sub_page">
+
+
+<th:block th:include="fragments/header.html"></th:block>
+  <!-- dashboard section -->
+
+  <section class="dashboard_section layout_padding">
+    <div class="dashboard_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2>
+            Welcome to Your <span>Personal Dashboard</span>
+          </h2>
+          <p>
+            Stay organized and manage your finances effortlessly.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/BudgetIcon.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Budget
+                </h5>
+                <p>
+                  Plan your expenses, set limits, and save. Create a budget for financial control and stability.
+                </p>
+                <a th:href="@{/budgets}">
+
+                  Create a Budget
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/ExpenseIcon.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Expenses
+                </h5>
+                <p>
+                  Keep a detailed record of all expenses to manage your money wisely and stay on top of your finances.
+                </p>
+               <a th:href="@{/expenses}">
+
+                  Record Your Expenses
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/GoalIcon.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Goals
+                </h5>
+                <p>
+                  Define clear financial goals, prioritize them, and create a strategic plan to achieve them!
+                </p>
+               <a th:href="@{/goals}">
+
+                  Set Your Financial Goals
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 offset-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/ReportIcon.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Reports
+                </h5>
+                <p>
+                  Access financial reports to assess income, expenses, and overall financial health, enabling informed decisions and future planning.
+                </p>
+                <a th:href="@{/report}">
+
+                  View Your Monthly Reports
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end dashboard section -->
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-2 info_col">
+          <div class="info_link_box">
+            <div class="info_links">
+               <a th:href="@{/}">
+                Home
+              </a>
+              <a th:href="@{/dashboard}">
+                Dashboard
+              </a>
+              <a class="" href=".html"> <!--Page not yet created -->
+                Tips
+              </a>
+            </div>
+        
+         </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col ">
+            <div class="info_links">
+               <a th:href="@{/budgets}">
+                Budget
+              </a>
+              <a th:href="@{/expenses}">
+                Expenses
+              </a>
+             <a th:href="@{/goals}">
+                Goals
+              </a>
+              <a th:href="@{/report}">
+                Reports
+              </a>
+            </div>
+          </div>
+        <!--
+        <div class="col-md-6 col-lg-3 info_col ">
+          <h4>
+            Subscribe
+          </h4>
+          <form action="#">
+            <input type="text" placeholder="Enter email" />
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>
